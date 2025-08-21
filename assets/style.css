@@ -1,0 +1,220 @@
+/* 引入外部資源 */
+
+/* 字體 */ 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Noto+Sans+TC:wght@100..900&family=Poppins&display=swap');
+
+
+/* 顏色變數 */
+:root{
+    --primary-100: #F5FEE7;
+    --primary-400: #57a203;    
+
+    --neutral-0: #ffffff;
+    --neutral-100: #f8f9fa;
+    --neutral-300: #dee2e6;
+    --neutral-600: #6c757d;
+    --neutral-900: #212529;
+}
+
+/* 標籤基本樣式設定 */
+
+*,
+*::before,
+*::after { /* 偽類一起設定 */
+  box-sizing: border-box; /*減少 content-box 的計算問題 , 讓寬度直接等於在畫面中的寬度*/
+}
+
+img {
+  vertical-align: middle; /* 將圖片的樣式改成中間對齊 清除圖片下方2~3px 的空白 */
+}
+
+a{
+    color: var(--primary-400); /* <a> 通用顏色 */
+    text-underline-offset: 4px; /* 下底線偏移 */ 
+    display: block; /* 由於每個連結都獨佔一行, 直接設定為區塊元素 */
+}
+
+
+body{
+
+    /* 文字樣式 */
+    font-family: "Baloo 2", sans-serif; /* 由於字體都一樣, 因此直接寫在body上 */
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: var(--neutral-900);
+}
+
+/* 已大部分元素被限縮的範圍設定 container 寬度 */
+.container{
+    width: 856px;
+    margin: 0 auto;
+}
+
+/* 標題通用樣式 */
+.h1{
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.h3{
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.h4{
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.h5{
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.text-sm{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* 文字顏色通用樣式 */
+
+.text-white{
+    color:var(--neutral-0);
+}
+
+  /* 中性色 */
+.text-neutral-100{ 
+    color:var(--neutral-100);
+}
+
+.text-neutral-400{
+    color:var(--neutral-400);
+}
+
+.text-neutral-600{
+    color:var(--neutral-600);
+}
+
+  /* 主色 */
+
+.text-primary-400{
+    color: var(--primary-400);
+}
+
+.bg-primary-100{
+    background-color: var(--primary-100);
+}
+
+.bg-neutral-100{
+    background-color: var(--neutral-100);
+}
+
+/* 間距樣式 */
+/* ( 由 page 外設定到內 ) */
+/* 可以將每個section視為一個群組去慢慢往內觀察設計稿 */
+/* 每一個 section 去觀察外容器和內容器的距離 */
+/* 這邊統一向下推, 做到間距的樣式 */
+
+.p-32{
+    padding: 32px;
+}
+
+.-py-8{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* padding y方向通用樣式 */
+.py-64{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.pb-48{
+    padding-bottom: 48px;
+}
+
+.pr-8{
+    padding-right: 8px;
+}
+
+.mb-4{
+    margin-bottom: 4px;
+}
+
+.mb-12{
+    margin-bottom: 12px;
+}
+
+.mb-16{
+    margin-bottom: 16px;
+}
+
+.mb-24{
+    margin-bottom: 24px;
+}
+
+.mb-48{
+    margin-bottom: 48px;
+}
+
+.pb-48{
+    padding-bottom: 48px;
+}
+
+
+/* page */
+
+.header{
+    background-image: url(./img/Hero\ Section.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 152px 0; /* 再去 26:15 確認助教計算概念  */
+                      /* ( 設計稿上期望高度 400 減掉 引用進來時的高度 96 在去除以2 作為高度設定 ) */
+    text-align: center;
+}
+
+.quote{
+    border-radius: 12px;
+    text-align: center;
+}
+
+.intro img{
+    width:1076px;
+    margin-left: -110px;
+    margin-right: -110px;
+}
+
+.section-lined{
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+.history-desc{
+    border-left: 1px solid var(--neutral-900);
+    padding-left:8px;
+}
+
+.history-list{
+    list-style: disc;
+    padding-left: 24px;
+}
+
+.concept-item{
+    padding-left: 12px;
+    border-left: 3px solid var(--neutral-300);
+}
+
+.bi{
+    padding-right: 8px;
+    vertical-align: bottom;
+}
+
+.footer{
+    text-align: center;
+}
